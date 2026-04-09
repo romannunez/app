@@ -1,0 +1,42 @@
+{
+  "cli": {
+    "version": ">= 5.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      },
+      "env": {
+        "EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN": "${EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN}",
+        "RNMAPBOX_MAPS_DOWNLOAD_TOKEN": "${RNMAPBOX_MAPS_DOWNLOAD_TOKEN}"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN": "${EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN}",
+        "RNMAPBOX_MAPS_DOWNLOAD_TOKEN": "${RNMAPBOX_MAPS_DOWNLOAD_TOKEN}"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN": "${EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN}",
+        "RNMAPBOX_MAPS_DOWNLOAD_TOKEN": "${RNMAPBOX_MAPS_DOWNLOAD_TOKEN}"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
